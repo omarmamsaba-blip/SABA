@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<title>SABA</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="SABA">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --basalt:#FFFFFF; --surface:#FFFFFF; --surface2:#F1EDE4; --line:#DDD6C7;
+  --bone:#211B12; --bone-dim:#4A4032; --bone-faint:#6E6350;
+  --copper:#9C5210; --copper-lo:#D9944C; --verd:#1F5A49; --alert:#A63A24;
+  --pad:16px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{
+  background:var(--basalt); color:var(--bone);
+  font-family:'Inter',system-ui,sans-serif; font-size:15px; line-height:1.5;
+  padding-top:env(safe-area-inset-top);
+  overscroll-behavior-y:none;
+}
+h1,h2,h3,.display{font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.01em;text-transform:uppercase;margin:0}
+.mono{font-family:'IBM Plex Mono',monospace}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--bone-faint)}
+button{font-family:inherit;color:inherit;border:none;background:none;cursor:pointer}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--line);
+  padding:calc(env(safe-area-inset-top) + 12px) var(--pad) 12px;
+}
+.hdr-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.wordmark{font-size:26px;line-height:1}
+.wordmark span{color:var(--copper)}
+.rankbox{text-align:right}
+.rankname{font-family:'Anton',sans-serif;font-size:14px;color:var(--copper);line-height:1.1}
+.xpbar{height:3px;background:var(--surface2);border-radius:2px;margin-top:10px;overflow:hidden}
+.xpfill{height:100%;background:linear-gradient(90deg,var(--copper-lo),var(--copper));transition:width .5s ease}
+
+/* ---------- layout ---------- */
+main{padding:20px var(--pad) 120px;max-width:620px;margin:0 auto}
+.view{display:none;animation:fade .25s ease}
+.view.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 1px 4px rgba(40,30,15,.05)}
+.card.flush{padding:0;overflow:hidden}
+
+/* ---------- today ---------- */
+.dayhead{margin-bottom:16px}
+.dayhead .date{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.sesstitle{font-size:34px;line-height:.95;margin:2px 0 6px}
+.sesssub{color:var(--bone-dim);font-size:13px}
+.chip{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;
+  padding:4px 9px;border-radius:999px;border:1px solid var(--line);color:var(--bone-dim);text-transform:uppercase}
+.chip.hot{border-color:var(--copper-lo);color:var(--copper)}
+.chip.cool{border-color:#3d5a52;color:var(--verd)}
+
+.venue{display:flex;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:16px}
+.venue button{flex:1;padding:11px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--bone-faint);transition:.2s}
+.venue button.on{background:var(--surface2);color:var(--bone)}
+
+.ex{display:flex;gap:13px;padding:14px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.ex:last-child{border-bottom:none}
+.tick{flex:0 0 24px;height:24px;border-radius:7px;border:1.5px solid var(--line);margin-top:1px;
+  display:flex;align-items:center;justify-content:center;transition:.18s}
+.tick.on{background:var(--copper);border-color:var(--copper)}
+.tick svg{width:13px;height:13px;opacity:0;transition:.18s}
+.tick.on svg{opacity:1}
+.ex-body{flex:1;min-width:0}
+.ex.done .ex-name{color:var(--bone-dim);text-decoration:line-through;opacity:.75}
+.ex-name{font-weight:600;font-size:15px;line-height:1.3}
+.ex-meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:4px}
+.ex-sets{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--copper);font-weight:500}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;padding:2px 6px;border-radius:4px;text-transform:uppercase}
+.tag.uni{background:rgba(180,102,31,.14);color:var(--copper)}
+.tag.main{background:var(--surface2);color:var(--bone-dim)}
+.tag.post{background:rgba(52,112,95,.13);color:var(--verd)}
+.tag.core{background:rgba(52,112,95,.13);color:var(--verd)}
+.tag.left{background:var(--copper);color:#FFF8EC;font-weight:600}
+.ex-note{font-size:12.5px;color:var(--bone-dim);margin-top:5px;line-height:1.45}
+
+.bigbtn{width:100%;padding:17px;border-radius:12px;background:var(--copper);color:#FFF8EC;
+  font-family:'Anton',sans-serif;font-size:17px;letter-spacing:.04em;text-transform:uppercase;transition:.2s}
+.bigbtn:active{transform:scale(.985)}
+.bigbtn.ghost{background:transparent;border:1px solid var(--line);color:var(--bone-dim)}
+.bigbtn:disabled{opacity:.45}
+
+.habits{display:flex;gap:10px}
+.habit{flex:1;border:1px solid var(--line);border-radius:12px;padding:14px 12px;text-align:left;transition:.2s}
+.habit.on{border-color:var(--copper);background:rgba(180,102,31,.08)}
+.habit .hname{font-weight:600;font-size:13px;margin-bottom:3px}
+.habit .hstreak{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--bone-faint)}
+.habit.on .hstreak{color:var(--copper)}
+
+/* ---------- week ---------- */
+.wk{display:flex;gap:6px;margin-bottom:18px}
+.wkd{flex:1;border:1px solid var(--line);border-radius:10px;padding:10px 4px;text-align:center;transition:.2s}
+.wkd.on{border-color:var(--copper)}
+.wkd.done{background:var(--copper);border-color:var(--copper);color:#FFF8EC}
+.wkd .d{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;opacity:.9}
+.wkd .t{font-family:'Anton',sans-serif;font-size:13px;margin-top:5px;line-height:1}
+
+/* ---------- quests ---------- */
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.q{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--surface);position:relative;overflow:hidden}
+.q.locked{opacity:.75}
+.q.unlocked{border-color:var(--copper);background:linear-gradient(160deg,rgba(180,102,31,.10),var(--surface))}
+.q .qi{font-size:19px;margin-bottom:7px;display:block;filter:grayscale(1);opacity:.6}
+.q.unlocked .qi{filter:none;opacity:1}
+.q .qn{font-family:'Anton',sans-serif;font-size:14px;line-height:1.1;margin-bottom:5px}
+.q .qd{font-size:11.5px;color:var(--bone-dim);line-height:1.35}
+.q .qbar{height:2px;background:var(--surface2);margin-top:9px;border-radius:2px;overflow:hidden}
+.q .qbar i{display:block;height:100%;background:var(--copper)}
+
+/* ---------- body / symmetry ---------- */
+.gauge{padding:22px 18px}
+.gauge-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:16px}
+.gapnum{font-family:'Anton',sans-serif;font-size:52px;line-height:.85;color:var(--copper)}
+.gapnum small{font-size:17px;color:var(--bone-dim);margin-left:3px}
+.mirror{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.mirror .lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;width:34px;color:var(--bone-faint);letter-spacing:.08em}
+.mirror .track{flex:1;height:26px;background:var(--surface2);border-radius:5px;overflow:hidden;position:relative}
+.mirror .fill{height:100%;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.mirror.l .fill{background:linear-gradient(90deg,var(--copper-lo),var(--copper))}
+.mirror.r .fill{background:linear-gradient(90deg,#C7BAA1,#A2947C)}
+.mirror .val{font-family:'IBM Plex Mono',monospace;font-size:12px;width:48px;text-align:right}
+
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.f label{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--bone-faint);text-transform:uppercase;margin-bottom:5px}
+.f input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:9px;
+  padding:12px;color:var(--bone);font-family:'IBM Plex Mono',monospace;font-size:16px}
+.f input:focus{outline:none;border-color:var(--copper)}
+
+table.hist{width:100%;border-collapse:collapse;font-family:'IBM Plex Mono',monospace;font-size:12px}
+table.hist th{text-align:right;color:var(--bone-faint);font-weight:400;font-size:9.5px;letter-spacing:.1em;padding:8px 5px;border-bottom:1px solid var(--line)}
+table.hist th:first-child,table.hist td:first-child{text-align:left}
+table.hist td{text-align:right;padding:9px 5px;border-bottom:1px solid var(--line)}
+
+/* ---------- year ---------- */
+.phase{border-left:2px solid var(--line);padding:0 0 22px 16px;position:relative}
+.phase:last-child{padding-bottom:4px}
+.phase.cur{border-left-color:var(--copper)}
+.phase .dot{position:absolute;left:-6px;top:3px;width:10px;height:10px;border-radius:50%;background:var(--line)}
+.phase.cur .dot{background:var(--copper);box-shadow:0 0 0 4px rgba(180,102,31,.16)}
+.phase.past .dot{background:var(--bone-faint)}
+.phase h3{font-size:19px;margin-bottom:3px}
+.phase .pw{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--bone-faint);letter-spacing:.1em;margin-bottom:7px}
+.phase p{font-size:13px;color:var(--bone-dim);margin:0 0 9px;line-height:1.5}
+.wgrid{display:grid;grid-template-columns:repeat(13,1fr);gap:3px}
+.wgrid i{aspect-ratio:1;border-radius:2px;background:var(--surface2)}
+.wgrid i.done{background:var(--copper-lo)}
+.wgrid i.cur{background:var(--copper)}
+.wgrid i.dl{background:var(--surface2);border:1px solid var(--line)}
+
+/* ---------- nav ---------- */
+nav{position:fixed;bottom:0;left:0;right:0;z-index:50;display:flex;
+  background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom)}
+nav button{flex:1;padding:11px 2px 9px;display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--bone-faint);transition:.2s}
+nav button.on{color:var(--copper)}
+nav svg{width:20px;height:20px;stroke-width:1.7}
+nav span{font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase}
+
+/* ---------- tasks ---------- */
+.taskadd{display:flex;flex-direction:column;gap:9px}
+.taskadd input{background:var(--surface2);border:1px solid var(--line);border-radius:9px;padding:13px;color:var(--bone);font-family:'Inter',sans-serif;font-size:15px;width:100%}
+.taskadd input:focus{outline:none;border-color:var(--copper)}
+.taskadd input[type=datetime-local]{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--bone-dim);color-scheme:light}
+.trow{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}
+.trow:last-child{border-bottom:none}
+.trow.done .tt{color:var(--bone-faint);text-decoration:line-through}
+.trow .tt{font-size:15px;font-weight:500;line-height:1.35;flex:1}
+.trow .tdue{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--bone-faint);margin-top:3px}
+.trow.over .tdue{color:var(--alert)}
+.trow.soon .tdue{color:var(--copper)}
+.tdel{color:var(--bone-faint);font-size:19px;padding:0 3px;line-height:1;flex:0 0 auto}
+
+/* ---------- toast ---------- */
+#toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translate(-50%,24px);
+  background:var(--copper);color:#FFF8EC;padding:13px 20px;border-radius:11px;z-index:99;
+  font-weight:700;font-size:13.5px;opacity:0;transition:.35s cubic-bezier(.2,.8,.2,1);pointer-events:none;
+  max-width:88vw;text-align:center;box-shadow:0 10px 30px rgba(60,45,25,.25)}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+
+.prayrow{display:flex;gap:5px}
+.pr{flex:1;text-align:center;border:1px solid var(--line);border-radius:9px;padding:8px 2px;transition:.2s}
+.pr .pn{font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.09em;color:var(--bone-faint);text-transform:uppercase}
+.pr .pt{font-family:'IBM Plex Mono',monospace;font-size:11px;margin-top:4px;color:var(--bone-dim);white-space:nowrap}
+.pr.next{border-color:var(--verd);background:rgba(52,112,95,.08)}
+.pr.next .pn,.pr.next .pt{color:var(--verd)}
+.pr.past .pt{color:var(--bone-faint)}
+.note{font-size:12.5px;color:var(--bone-dim);line-height:1.55}
+.note strong{color:var(--bone)}
+.divider{height:1px;background:var(--line);margin:16px 0}
+.sect{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--bone-faint);text-transform:uppercase;margin:26px 0 11px}
+.sect:first-child{margin-top:0}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hdr-row">
+    <div class="wordmark">SAB<span>A</span></div>
+    <div class="rankbox">
+      <div class="eyebrow" id="wkLabel">WEEK 1 / 52</div>
+      <div class="rankname" id="rankName">UNBROKEN GROUND</div>
+    </div>
+  </div>
+  <div class="xpbar"><div class="xpfill" id="xpFill" style="width:0%"></div></div>
+</header>
+
+<main>
+
+<!-- ══════════ TODAY ══════════ -->
+<section class="view on" id="v-today">
+  <div class="dayhead">
+    <div class="date">
+      <div class="eyebrow" id="todayDate">—</div>
+      <div class="chip" id="phaseChip">FOUNDATION</div>
+    </div>
+    <h1 class="sesstitle" id="sessTitle">—</h1>
+    <div class="sesssub" id="sessSub">—</div>
+  </div>
+
+  <div class="card" style="padding:14px 16px" id="prayerCard">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+      <div class="eyebrow">Prayer — Cairo</div>
+      <div class="mono" style="font-size:11px;color:var(--verd)" id="nextPrayer">—</div>
+    </div>
+    <div class="prayrow" id="prayerRow"></div>
+  </div>
+
+  <div class="venue" id="venueSel">
+    <button data-v="gym" class="on">Gym</button>
+    <button data-v="home">Home</button>
+  </div>
+
+  <div class="card flush" id="exCard" style="padding:4px 18px"></div>
+
+  <button class="bigbtn" id="finishBtn">Complete session</button>
+
+  <div class="sect">Fuel — the three that count</div>
+  <div class="card flush" style="padding:4px 18px" id="mealCard"></div>
+
+  <div class="sect">Daily — non-negotiable</div>
+  <div class="habits">
+    <button class="habit" data-h="posture">
+      <div class="hname">Posture reset</div>
+      <div class="hstreak" id="s-posture">0 day streak</div>
+    </button>
+    <button class="habit" data-h="clean">
+      <div class="hname">No Pepsi</div>
+      <div class="hstreak" id="s-clean">0 day streak</div>
+    </button>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <div class="eyebrow" style="margin-bottom:9px">The 5-minute reset</div>
+    <div class="note" id="postureList"></div>
+  </div>
+</section>
+
+<!-- ══════════ WEEK ══════════ -->
+<section class="view" id="v-week">
+  <div class="eyebrow" style="margin-bottom:10px">This week</div>
+  <div class="wk" id="weekStrip"></div>
+  <div class="card">
+    <div class="eyebrow" style="margin-bottom:10px">Week rules</div>
+    <div class="note">
+      <strong>Left always leads.</strong> On every single-arm or single-leg movement, the left side goes first and sets the number. The right side matches it and stops — never more, even when it easily could. This is the entire mechanism for closing the gap.<br><br>
+      <strong>No spinal loading.</strong> No deadlifts, no barbell rows, no weighted sit-ups or Russian twists, no loaded rounding of the lower back. Hip thrusts and split squats build the same muscle without compressing L4/L5.<br><br>
+      <strong>Two pulls for every push.</strong> Rounded shoulders come from a strong front and a sleeping upper back. Face pulls and Y-raises are prescribed every session and they are the ones to never skip.<br><br>
+      <strong>Stop two reps short.</strong> Every set, all year, except the last set of the last exercise. Grinding to failure buys nothing and costs the next session.
+    </div>
+  </div>
+  <div class="card">
+    <div class="eyebrow" style="margin-bottom:10px">The week</div>
+    <div class="note" id="weekPlan"></div>
+  </div>
+</section>
+
+<!-- ══════════ QUESTS ══════════ -->
+<section class="view" id="v-quests">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:16px">
+    <div>
+      <div class="eyebrow">Unlocked</div>
+      <div class="display" style="font-size:38px;line-height:1" id="qCount">0 / 0</div>
+    </div>
+    <div style="text-align:right">
+      <div class="eyebrow">XP</div>
+      <div class="mono" style="font-size:19px;color:var(--copper)" id="xpNum">0</div>
+    </div>
+  </div>
+  <div class="qgrid" id="qGrid"></div>
+</section>
+
+<!-- ══════════ BODY ══════════ -->
+<section class="view" id="v-body">
+  <div class="card gauge">
+    <div class="gauge-top">
+      <div>
+        <div class="eyebrow">Arm gap — right over left</div>
+        <div class="gapnum" id="gapNum">—<small>cm</small></div>
+      </div>
+      <div style="text-align:right">
+        <div class="eyebrow">Target</div>
+        <div class="mono" style="font-size:15px;color:var(--verd)">0.5 cm</div>
+      </div>
+    </div>
+    <div class="mirror l"><span class="lbl">LEFT</span><div class="track"><div class="fill" id="barL" style="width:0%"></div></div><span class="val" id="valL">—</span></div>
+    <div class="mirror r"><span class="lbl">RIGHT</span><div class="track"><div class="fill" id="barR" style="width:0%"></div></div><span class="val" id="valR">—</span></div>
+    <div class="note" style="margin-top:14px" id="gapNote">Log your first measurement to set the baseline.</div>
+  </div>
+
+  <div class="card">
+    <div class="eyebrow" style="margin-bottom:13px">Log measurements — Sunday mornings, before food</div>
+    <div class="fgrid">
+      <div class="f"><label>Weight kg</label><input type="number" step="0.1" inputmode="decimal" id="i-wt"></div>
+      <div class="f"><label>Chest cm</label><input type="number" step="0.1" inputmode="decimal" id="i-ch"></div>
+      <div class="f"><label>Left arm cm</label><input type="number" step="0.1" inputmode="decimal" id="i-al"></div>
+      <div class="f"><label>Right arm cm</label><input type="number" step="0.1" inputmode="decimal" id="i-ar"></div>
+      <div class="f"><label>Waist cm</label><input type="number" step="0.1" inputmode="decimal" id="i-wa"></div>
+      <div class="f"><label>Pull-up +kg × 5</label><input type="number" step="0.5" inputmode="decimal" id="i-pu"></div>
+    </div>
+    <button class="bigbtn" style="margin-top:14px" id="saveMeas">Save measurements</button>
+  </div>
+
+  <div class="card">
+    <div class="eyebrow" style="margin-bottom:11px">Year targets</div>
+    <div id="targets"></div>
+  </div>
+
+  <div class="card">
+    <div class="eyebrow" style="margin-bottom:6px">History</div>
+    <div style="overflow-x:auto"><table class="hist" id="histTable"></table></div>
+  </div>
+</section>
+
+<!-- ══════════ YEAR ══════════ -->
+<section class="view" id="v-year">
+  <div class="card">
+    <div class="eyebrow" style="margin-bottom:7px">Progress</div>
+    <div style="display:flex;gap:22px">
+      <div><div class="display" style="font-size:33px;line-height:1" id="statSess">0</div><div class="eyebrow">Sessions</div></div>
+      <div><div class="display" style="font-size:33px;line-height:1" id="statWk">1</div><div class="eyebrow">Week</div></div>
+      <div><div class="display" style="font-size:33px;line-height:1" id="statStreak">0</div><div class="eyebrow">Streak</div></div>
+    </div>
+  </div>
+  <div class="sect">The 52 weeks</div>
+  <div id="phaseList"></div>
+  <div class="card">
+    <div class="eyebrow" style="margin-bottom:10px">Eating — the part that decides it</div>
+    <div class="note">
+      You gain and lose fast, which means training is the easy variable. At 75 kg with a high metabolism, growing needs roughly <strong>3,000 kcal and 150 g of protein a day</strong>, every day, including the days you don't train. Miss that and twelve months of good sessions will measure the same as six.<br><br>
+      The simplest version that works: protein at every meal (eggs, chicken, meat, fish, labneh, cottage cheese), a real breakfast before work, and one deliberate extra — a shake, a sandwich, a handful of nuts — in the late afternoon. That last one is usually the whole difference.
+    </div>
+  </div>
+  <div class="card">
+    <button class="bigbtn ghost" id="resetBtn">Reset all data</button>
+  </div>
+</section>
+
+<!-- ══════════ TASKS ══════════ -->
+<section class="view" id="v-tasks">
+  <div class="card" style="padding:14px">
+    <div class="taskadd">
+      <input type="text" id="t-text" placeholder="Add a task…" autocomplete="off">
+      <input type="datetime-local" id="t-due">
+      <button class="bigbtn" style="padding:13px" id="t-add">Add</button>
+    </div>
+  </div>
+  <div class="sect" id="t-count">Tasks</div>
+  <div class="card flush" style="padding:2px 16px" id="taskList"></div>
+  <div class="note" style="padding:0 4px">Times show as due and overdue here. For a sound or lock-screen alert, add the time-critical ones to your phone's Reminders too — a saved web app can't ring your phone on its own.</div>
+</section>
+
+</main>
+
+<nav>
+  <button data-v="today" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 8v8M18 8v8M9 12h6M4 10v4M20 10v4"/></svg><span>Today</span></button>
+  <button data-v="week"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Week</span></button>
+  <button data-v="quests"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l2.5 5.5 6 .8-4.3 4.2 1 6-5.2-2.8L6.8 19.5l1-6L3.5 9.3l6-.8z"/></svg><span>Quests</span></button>
+  <button data-v="body"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v18M7 7l-3 3M17 7l3 3M7 17l-3-3M17 17l3-3"/></svg><span>Body</span></button>
+  <button data-v="tasks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6l2 2 3-3M4 12l2 2 3-3M4 18l2 2 3-3M13 7h8M13 13h8M13 19h8"/></svg><span>Tasks</span></button>
+  <button data-v="year"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 18l5-6 4 4 5-8 4 5"/><path d="M3 21h18"/></svg><span>Year</span></button>
+</nav>
+
+<div id="toast"></div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   SABA — one year, both sides
+   ═══════════════════════════════════════════════════════════ */
+
+const e = (n,s,r,note,tag) => ({n,s,r,note:note||'',tag:tag||''});
+
+/* ---------- PHASES ---------- */
+const PHASES = [
+  {id:1,name:'Foundation',w:[1,13],tag:'Rebuild the base',
+   desc:'Moderate loads, high positional quality. Every session teaches the left side to work alone and the upper back to wake up. Nothing heavy enough to hurt you while the disc and the posture are still catching up.'},
+  {id:2,name:'Build',w:[14,26],tag:'Add the mass',
+   desc:'Loads climb, rep ranges drop to 6–10 on the main lifts. Chest and back carry the volume. This is where the weight on the scale starts moving if the eating holds.'},
+  {id:3,name:'Expand',w:[27,39],tag:'Width and thickness',
+   desc:'Peak volume of the year. Weighted pull-ups get heavy, shrugs get long, lateral raises get relentless. The V is built here.'},
+  {id:4,name:'Forge',w:[40,52],tag:'Own it',
+   desc:'Heaviest work of the year on a body that can finally take it, then a final push on chest and traps. You finish the year stronger than you have ever been, on both sides.'}
+];
+const RANKS = ['Unbroken Ground','First Light','Steady Hand','Even Keel','Set Stone','Long Wind','True North','Full Draw','Deep Root','Iron Shoulder','Both Sides','Saba'];
+
+/* ---------- SESSIONS ---------- */
+const D = {}; // D[type][venue][phase] = [exercises]
+
+D.push = {gym:[
+ [e('Incline dumbbell press','4','10','Bench at 30°. Elbows tucked ~45°, not flared.','main'),
+  e('Machine chest press','3','12','Stretch at the bottom, no lockout at the top.'),
+  e('Single-arm cable fly','3','12','Left arm first. Whatever left gives you, right matches and stops.','uni'),
+  e('Machine shoulder press','3','12','Neutral or slightly angled grip, easier on the shoulder.'),
+  e('Cable lateral raise','3','15','One arm at a time, left first. This is width.','uni'),
+  e('Rope pushdown','3','12',''),
+  e('Face pull','3','20','High elbows, pull to the forehead, hold one second. Never skip this.','post')],
+ [e('Incline dumbbell press','4','8','','main'),
+  e('Flat barbell bench','3','8','Shoulder blades pinned down and back the whole set.','main'),
+  e('Single-arm cable fly','3','12','Left leads.','uni'),
+  e('Seated dumbbell shoulder press','3','10',''),
+  e('Cable lateral raise','4','15','Left leads.','uni'),
+  e('Overhead cable extension','3','12',''),
+  e('Face pull','3','20','','post')],
+ [e('Incline dumbbell press','5','8','','main'),
+  e('Flat dumbbell press','4','10','','main'),
+  e('Weighted dips','3','8','Lean forward slightly — that shifts it to the chest.'),
+  e('Single-arm cable fly','3','15','Left leads.','uni'),
+  e('Cable lateral raise','4','15','Left leads.','uni'),
+  e('Rope pushdown','3','15',''),
+  e('Face pull','3','20','','post')],
+ [e('Incline barbell press','4','6','Heaviest pressing of the year. Spotter or safeties.','main'),
+  e('Incline dumbbell press','3','10','','main'),
+  e('Weighted dips','4','8',''),
+  e('Single-arm cable fly','3','12','Left leads.','uni'),
+  e('Cable lateral raise','4','12','Left leads.','uni'),
+  e('Overhead cable extension','3','12',''),
+  e('Face pull','3','20','','post')]
+],home:[
+ [e('Deficit push-up','4','15','Hands on the dumbbells so the chest drops below them.','main'),
+  e('Dumbbell bench press','4','15','15 kg is light for you — make it hard with a 3-second lowering.','main'),
+  e('Single-arm dumbbell fly','3','12','Left first, right matches.','uni'),
+  e('Dips','3','10','Lean forward for chest.'),
+  e('Dumbbell shoulder press','3','12',''),
+  e('Dumbbell lateral raise','3','15','Left first.','uni'),
+  e('Prone rear-delt raise','3','20','Face down on the bench, thumbs up, squeeze the shoulder blades.','post')],
+ [e('Feet-elevated push-up','4','15','Feet on the bench.','main'),
+  e('Dips','4','10','Add a loaded backpack once 10 is easy.'),
+  e('Dumbbell bench press','4','15','3 seconds down, 1 up.','main'),
+  e('Single-arm dumbbell press','3','10','Left first.','uni'),
+  e('Dumbbell lateral raise','4','15','Left first.','uni'),
+  e('Overhead dumbbell extension','3','12',''),
+  e('Prone T-raise','3','15','','post')],
+ [e('Weighted dips','4','10','Backpack loaded with the dumbbells.','main'),
+  e('Feet-elevated push-up','4','20','3 seconds down.','main'),
+  e('Dumbbell bench press','4','15','Pause one second on the chest.'),
+  e('Single-arm dumbbell fly','3','15','Left first.','uni'),
+  e('Dumbbell lateral raise','4','18','Left first.','uni'),
+  e('Prone T-raise','3','15','','post')],
+ [e('Weighted dips','5','10','','main'),
+  e('Deficit push-up','4','20','3 seconds down, hands on the dumbbells.','main'),
+  e('Dumbbell bench press','4','15','Pause one second.'),
+  e('Single-arm dumbbell press','3','10','Left first.','uni'),
+  e('Dumbbell lateral raise','4','15','Left first.','uni'),
+  e('Prone T-raise','3','15','','post')]
+]};
+
+D.pull = {gym:[
+ [e('Wide-grip lat pulldown','4','12','Pull the bar to the collarbone, elbows down not back. Width comes from here.','main'),
+  e('Chest-supported row','4','12','Chest stays on the pad — that is what keeps the load off your lower back.','main'),
+  e('Single-arm cable row','3','12','Left first, right matches.','uni'),
+  e('Straight-arm pulldown','3','15','Lats only, arms stay long.'),
+  e('Dumbbell shrug','3','15','Chin tucked, shrug straight up, hold two seconds.'),
+  e('Single-arm dumbbell curl','3','12','Left first.','uni'),
+  e('Prone Y-raise','3','12','Face down on an incline bench, arms in a Y, thumbs up. Lower traps.','post')],
+ [e('Weighted pull-up','4','6','','main'),
+  e('Chest-supported row','4','10','','main'),
+  e('Single-arm cable row','3','12','Left first.','uni'),
+  e('Straight-arm pulldown','3','15',''),
+  e('Barbell shrug','4','12','Two-second hold at the top. Chin tucked, never roll the shoulders.'),
+  e('Incline dumbbell curl','3','10','Left first.','uni'),
+  e('Prone Y-raise','3','12','','post')],
+ [e('Weighted pull-up','5','5','Heaviest of the year so far.','main'),
+  e('Chest-supported row','4','8','','main'),
+  e('Single-arm cable row','4','12','Left first.','uni'),
+  e('Straight-arm pulldown','3','15',''),
+  e('Barbell shrug','4','15','Two-second hold.'),
+  e('Hammer curl','3','12','Left first.','uni'),
+  e('Prone Y-raise','3','15','','post')],
+ [e('Weighted pull-up','5','5','','main'),
+  e('Chest-supported row','4','8','','main'),
+  e('Single-arm dumbbell row','4','10','Knee on the bench. Left first.','uni'),
+  e('Straight-arm pulldown','3','15',''),
+  e('Barbell shrug','4','12',''),
+  e('Incline dumbbell curl','3','10','Left first.','uni'),
+  e('Prone Y-raise','3','15','','post')]
+],home:[
+ [e('Pull-up','4','6','Full hang at the bottom, chin over the bar.','main'),
+  e('Single-arm dumbbell row','4','12','Knee on the bench. Left first, right matches.','uni'),
+  e('Inverted row','3','12','Under a low bar or the edge of a sturdy table.','main'),
+  e('Dumbbell shrug','3','20','Two-second hold, chin tucked.'),
+  e('Single-arm dumbbell curl','3','12','Left first.','uni'),
+  e('Prone Y-raise','3','12','Face down on the bench, arms in a Y. Lower traps.','post')],
+ [e('Pull-up','4','8','','main'),
+  e('Single-arm dumbbell row','4','12','Left first.','uni'),
+  e('Chin-up','3','8','Underhand — hits the biceps harder.'),
+  e('Dumbbell shrug','4','20',''),
+  e('Incline dumbbell curl','3','12','Left first.','uni'),
+  e('Prone Y-raise','3','15','','post')],
+ [e('Weighted pull-up','5','6','Loaded backpack.','main'),
+  e('Single-arm dumbbell row','4','15','3-second lowering. Left first.','uni'),
+  e('Feet-elevated inverted row','4','12','','main'),
+  e('Dumbbell shrug','4','25',''),
+  e('Hammer curl','3','12','Left first.','uni'),
+  e('Prone Y-raise','3','15','','post')],
+ [e('Weighted pull-up','5','5','','main'),
+  e('Single-arm dumbbell row','4','12','Left first.','uni'),
+  e('Chin-up','4','8',''),
+  e('Dumbbell shrug','4','20',''),
+  e('Single-arm dumbbell curl','3','12','Left first.','uni'),
+  e('Prone Y-raise','3','15','','post')]
+]};
+
+D.legs = {gym:[
+ [e('Leg press','4','12','Stop before your hips curl off the pad — that is the disc-safe depth.','main'),
+  e('Bulgarian split squat','3','10','Rear foot on the bench. Left leg first.','uni'),
+  e('Lying leg curl','3','12',''),
+  e('Hip thrust','3','12','Chin tucked, ribs down. Replaces the deadlift for you.','main'),
+  e('Single-leg calf raise','3','15','Left first.','uni'),
+  e('McGill curl-up','3','8','Hands under the lower back, one knee bent, lift the head and shoulders 2 cm only. 10-second holds.','core'),
+  e('Side plank','3','25s','Each side. Left first.','core'),
+  e('Bird dog','3','8','Each side, slow. Opposite arm and leg.','core')],
+ [e('Bulgarian split squat','4','10','Left first.','uni'),
+  e('Leg press','4','12','','main'),
+  e('Hip thrust','4','10','','main'),
+  e('Lying leg curl','3','12',''),
+  e('Single-leg calf raise','4','15','Left first.','uni'),
+  e('Pallof press','3','10','Each side. Resist the rotation — do not twist.','core'),
+  e('Side plank','3','30s','Each side.','core'),
+  e('Dead bug','3','8','Each side. Lower back stays flat on the floor.','core')],
+ [e('Leg press','4','10','','main'),
+  e('Bulgarian split squat','4','12','Left first.','uni'),
+  e('Hip thrust','4','10','','main'),
+  e('Lying leg curl','4','12',''),
+  e('Single-leg calf raise','4','15','Left first.','uni'),
+  e('Pallof press','3','12','Each side.','core'),
+  e('Side plank','3','35s','Each side.','core'),
+  e('Bird dog','3','10','Each side.','core')],
+ [e('Leg press','4','8','','main'),
+  e('Bulgarian split squat','4','10','Left first.','uni'),
+  e('Hip thrust','4','8','','main'),
+  e('Lying leg curl','3','12',''),
+  e('Single-leg calf raise','4','15','Left first.','uni'),
+  e('Suitcase carry','3','40m','One dumbbell, one side, stay perfectly upright. Left first.','core'),
+  e('Side plank','3','40s','Each side.','core'),
+  e('Dead bug','3','10','Each side.','core')]
+],home:[
+ [e('Bulgarian split squat','4','12','Rear foot on the bench, dumbbells in hand. Left first.','uni'),
+  e('Goblet squat','3','15','One dumbbell at the chest.','main'),
+  e('Dumbbell hip thrust','3','15','Shoulders on the bench, dumbbell across the hips.','main'),
+  e('Single-leg calf raise','3','20','Left first.','uni'),
+  e('McGill curl-up','3','8','Hands under the lower back, lift 2 cm only, 10-second holds.','core'),
+  e('Side plank','3','25s','Each side.','core'),
+  e('Bird dog','3','8','Each side.','core')],
+ [e('Bulgarian split squat','4','15','3 seconds down. Left first.','uni'),
+  e('Goblet squat','4','15','','main'),
+  e('Dumbbell hip thrust','4','12','','main'),
+  e('Bench step-up','3','12','Left first.','uni'),
+  e('Single-leg calf raise','4','20','Left first.','uni'),
+  e('Side plank','3','30s','Each side.','core'),
+  e('Dead bug','3','8','Each side.','core')],
+ [e('Bulgarian split squat','4','15','3 seconds down. Left first.','uni'),
+  e('Goblet squat','4','20','','main'),
+  e('Dumbbell hip thrust','4','15','Pause two seconds at the top.','main'),
+  e('Bench step-up','4','12','Left first.','uni'),
+  e('Single-leg calf raise','4','25','Left first.','uni'),
+  e('Side plank','3','35s','Each side.','core'),
+  e('Bird dog','3','10','Each side.','core')],
+ [e('Bulgarian split squat','5','12','Left first.','uni'),
+  e('Goblet squat','4','20','','main'),
+  e('Dumbbell hip thrust','4','15','','main'),
+  e('Bench step-up','4','12','Left first.','uni'),
+  e('Single-leg calf raise','4','25','Left first.','uni'),
+  e('Suitcase carry','3','40m','Left first.','core'),
+  e('Side plank','3','40s','Each side.','core'),
+  e('Dead bug','3','10','Each side.','core')]
+]};
+
+D.upper = {gym:[
+ [e('Incline dumbbell press','3','12','Lighter than Sunday. This is a second exposure, not a repeat.','main'),
+  e('Dips','3','10',''),
+  e('Dumbbell shrug','4','15','Two-second hold, chin tucked.','main'),
+  e('Face pull','3','15','','post'),
+  e('Lat pulldown','3','12',''),
+  e('Cable lateral raise','3','15','Left first.','uni'),
+  e('LEFT SIDE ONLY — one extra set','1','12','Cable fly, cable row, and curl. Left arm only. This is the only place all week you deliberately break the matching rule.','left')],
+ [e('Incline dumbbell press','3','12','','main'),
+  e('Weighted dips','3','10',''),
+  e('Dumbbell shrug','4','15','','main'),
+  e('Face pull','4','15','','post'),
+  e('Neutral-grip lat pulldown','3','12',''),
+  e('Cable lateral raise','4','15','Left first.','uni'),
+  e('LEFT SIDE ONLY — one extra set','1','12','Cable fly, cable row, and curl.','left')],
+ [e('Flat dumbbell press','4','12','','main'),
+  e('Dips','4','10',''),
+  e('Dumbbell shrug','4','20','','main'),
+  e('Face pull','4','20','','post'),
+  e('Lat pulldown','4','12',''),
+  e('Cable lateral raise','4','18','Left first.','uni'),
+  e('LEFT SIDE ONLY — two extra sets','2','12','Cable fly, cable row, and curl.','left')],
+ [e('Incline dumbbell press','4','10','','main'),
+  e('Weighted dips','4','10',''),
+  e('Dumbbell shrug','5','15','','main'),
+  e('Face pull','4','20','','post'),
+  e('Lat pulldown','4','10',''),
+  e('Cable lateral raise','4','15','Left first.','uni'),
+  e('LEFT SIDE ONLY — two extra sets','2','12','Cable fly, cable row, and curl.','left')]
+],home:[
+ [e('Push-up','3','20','','main'),
+  e('Dips','3','12',''),
+  e('Dumbbell shrug','4','20','Two-second hold.','main'),
+  e('Y-T-W raise','3','10','Face down on the bench, 10 of each shape. The rounded-shoulder fix.','post'),
+  e('Pull-up','3','8',''),
+  e('Dumbbell lateral raise','3','15','Left first.','uni'),
+  e('LEFT ARM ONLY — one extra set','1','12','Dumbbell fly, row, and curl. Left only.','left')],
+ [e('Feet-elevated push-up','3','20','','main'),
+  e('Dips','3','12',''),
+  e('Dumbbell shrug','4','20','','main'),
+  e('Y-T-W raise','3','12','','post'),
+  e('Pull-up','3','8',''),
+  e('Dumbbell lateral raise','4','15','Left first.','uni'),
+  e('LEFT ARM ONLY — one extra set','1','12','Fly, row, and curl.','left')],
+ [e('Dips','4','12','','main'),
+  e('Feet-elevated push-up','4','20','','main'),
+  e('Dumbbell shrug','4','25','','main'),
+  e('Y-T-W raise','3','12','','post'),
+  e('Pull-up','4','8',''),
+  e('Dumbbell lateral raise','4','18','Left first.','uni'),
+  e('LEFT ARM ONLY — two extra sets','2','12','Fly, row, and curl.','left')],
+ [e('Dips','4','12','','main'),
+  e('Deficit push-up','4','20','','main'),
+  e('Dumbbell shrug','5','20','','main'),
+  e('Y-T-W raise','3','15','','post'),
+  e('Pull-up','4','8',''),
+  e('Dumbbell lateral raise','4','15','Left first.','uni'),
+  e('LEFT ARM ONLY — two extra sets','2','12','Fly, row, and curl.','left')]
+]};
+
+const BOX_TECH = [
+  e('Shadow boxing','3','3 min','Mirror if you have one. Watch the left hand return to the chin.'),
+  e('Bag — jab and 1-2','3','3 min','Snap it back. Speed over power.'),
+  e('Bag — 1-2-3 with a slip','3','3 min',''),
+  e('Southpaw stance rounds','2','3 min','Switch stance. This loads your left side the way orthodox loads your right — it is asymmetry work disguised as boxing.','uni'),
+  e('Skipping','1','3 min','Cool down.')
+];
+const BOX_COND = [
+  e('Skipping','3','3 min','Warm up.'),
+  e('Bag intervals','6','2 min','30 seconds all-out at the end of each round.'),
+  e('Southpaw bag rounds','2','2 min','Left side.','uni'),
+  e('Shadow with dumbbells','2','2 min','Light — 5 kg maximum.'),
+  e('Side plank + dead bug','3','30s','Finisher. Each side.','core')
+];
+
+const POSTURE = [
+  'Wall slides — 10 reps. Back flat against the wall, arms slide up and down keeping wrists and elbows touching.',
+  'Band or towel pull-apart — 20 reps.',
+  'Doorway pec stretch — 30 seconds each side. Elbow at shoulder height, step through.',
+  'Thoracic extension — lie back over the end of the bench or a rolled towel under the mid-back, 8 slow breaths.',
+  'Chin tucks — 10 reps, 3-second hold. Pull the head straight back, not down.'
+];
+
+const SCHEDULE = [
+  {k:'upper',day:0,name:'Upper',sub:'Chest and traps — second exposure'},   // Sun
+  {k:'boxing1',day:1,name:'Boxing',sub:'Technique and bag work'},           // Mon
+  {k:'pull',day:2,name:'Pull',sub:'Width — lats, traps, rear delts'},       // Tue
+  {k:'legs',day:3,name:'Legs',sub:'Legs and disc-safe core'},               // Wed
+  {k:'boxing2',day:4,name:'Boxing',sub:'Conditioning rounds'},              // Thu
+  {k:'rest',day:5,name:'Rest',sub:'Walk. Nothing else. This is scheduled.'},// Fri
+  {k:'push',day:6,name:'Push',sub:'Chest priority'}                         // Sat
+];
+// Sun index 0 in JS getDay(); we map: Sun=Push priority per his plan
+SCHEDULE[0] = {k:'push',day:0,name:'Push',sub:'Chest priority'};
+SCHEDULE[6] = {k:'upper',day:6,name:'Upper',sub:'Chest and traps — second exposure'};
+
+/* ---------- QUESTS ---------- */
+const QUESTS = [
+  {id:'q1',i:'🔨',n:'First Rep',d:'Complete one session',g:s=>[sessCount(s),1]},
+  {id:'q2',i:'📐',n:'Baseline',d:'Log your first measurement',g:s=>[s.meas.length,1]},
+  {id:'q3',i:'🔁',n:'Ten Down',d:'10 sessions complete',g:s=>[sessCount(s),10]},
+  {id:'q4',i:'🧭',n:'The Habit',d:'30 posture resets',g:s=>[hCount(s,'posture'),30]},
+  {id:'q5',i:'⛰️',n:'Fifty',d:'50 sessions complete',g:s=>[sessCount(s),50]},
+  {id:'q6',i:'💯',n:'Century',d:'100 sessions complete',g:s=>[sessCount(s),100]},
+  {id:'q7',i:'🏛️',n:'Two Hundred',d:'200 sessions complete',g:s=>[sessCount(s),200]},
+  {id:'q8',i:'🧱',n:'Foundation Cleared',d:'Reach week 14',g:s=>[curWeek(s),14]},
+  {id:'q9',i:'🏗️',n:'Build Cleared',d:'Reach week 27',g:s=>[curWeek(s),27]},
+  {id:'q10',i:'🦅',n:'Expand Cleared',d:'Reach week 40',g:s=>[curWeek(s),40]},
+  {id:'q11',i:'👑',n:'The Full Year',d:'Week 52 with 150+ sessions',g:s=>[Math.min(curWeek(s)>=52?1:0,sessCount(s)>=150?1:0),1]},
+  {id:'q12',i:'⚖️',n:'Gap Under 1.5',d:'Arm gap below 1.5 cm',g:s=>[gapOK(s,1.5),1]},
+  {id:'q13',i:'⚖️',n:'Gap Under 1.0',d:'Arm gap below 1.0 cm',g:s=>[gapOK(s,1.0),1]},
+  {id:'q14',i:'🪞',n:'SABA',d:'Arm gap below 0.5 cm — the whole point',g:s=>[gapOK(s,0.5),1]},
+  {id:'q15',i:'📉',n:'Closing',d:'Gap smaller on 3 logs in a row',g:s=>[closing(s),1]},
+  {id:'q16',i:'⚓',n:'Seventy-Eight',d:'Reach 78 kg bodyweight',g:s=>[wtOK(s,78),1]},
+  {id:'q17',i:'🗿',n:'Eighty',d:'Reach 80 kg bodyweight',g:s=>[wtOK(s,80),1]},
+  {id:'q18',i:'🛡️',n:'Chest +2',d:'Chest up 2 cm from baseline',g:s=>[chOK(s,2),1]},
+  {id:'q19',i:'🛡️',n:'Chest +4',d:'Chest up 4 cm from baseline',g:s=>[chOK(s,4),1]},
+  {id:'q20',i:'🐂',n:'Chest +7',d:'Chest up 7 cm from baseline',g:s=>[chOK(s,7),1]},
+  {id:'q21',i:'🪝',n:'Loaded',d:'First weighted pull-up logged',g:s=>[puOK(s,0.5),1]},
+  {id:'q22',i:'🪜',n:'Plus Ten',d:'Pull-up +10 kg × 5',g:s=>[puOK(s,10),1]},
+  {id:'q23',i:'🗼',n:'Plus Twenty',d:'Pull-up +20 kg × 5',g:s=>[puOK(s,20),1]},
+  {id:'q24',i:'🥊',n:'Twenty-Five Rounds',d:'25 boxing sessions',g:s=>[boxCount(s),25]},
+  {id:'q25',i:'🥊',n:'Fifty Rounds',d:'50 boxing sessions',g:s=>[boxCount(s),50]},
+  {id:'q26',i:'🚫',n:'Thirty Clean',d:'30 days off Pepsi',g:s=>[hCount(s,'clean'),30]},
+  {id:'q27',i:'🌿',n:'Ninety Clean',d:'90 days off Pepsi',g:s=>[hCount(s,'clean'),90]},
+  {id:'q28',i:'✅',n:'Perfect Week',d:'All 5 sessions in one week',g:s=>[s.perfect||0,1]},
+  {id:'q29',i:'🎖️',n:'Five Perfect',d:'Five perfect weeks',g:s=>[s.perfect||0,5]},
+  {id:'q30',i:'🕯️',n:'One Hundred Days',d:'100 posture resets',g:s=>[hCount(s,'posture'),100]},
+  {id:'q31',i:'🥤',n:'Fed Machine',d:'30 shakes at 16:30',g:s=>[hCount(s,'m3'),30]},
+  {id:'q32',i:'🍱',n:'Box Man',d:'50 lunch boxes eaten',g:s=>[hCount(s,'m2'),50]}
+];
+
+/* ---------- STATE ---------- */
+const KEY='kamil-state-v1';
+let S = {start:null, done:{}, meas:[], habits:{}, unlocked:[], xp:0, venue:'gym', perfect:0, ticks:{}, todos:[]};
+
+async function load(){
+  let raw=null;
+  try{ const r=await window.storage.get(KEY); if(r&&r.value) raw=r.value; }catch(err){}
+  if(!raw){ try{ raw=localStorage.getItem(KEY); }catch(err){} }
+  if(raw){ try{ S=Object.assign(S,JSON.parse(raw)); }catch(err){} }
+  if(!S.start){ S.start=todayISO(); save(); }
+}
+async function save(){
+  const raw=JSON.stringify(S);
+  try{ localStorage.setItem(KEY,raw); }catch(err){}
+  try{ await window.storage.set(KEY,raw); }catch(err){}
+}
+
+/* ---------- HELPERS ---------- */
+function todayISO(d){ d=d||new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function curWeek(s){
+  const st=new Date(s.start+'T00:00:00'), now=new Date();
+  const diff=Math.floor((now-st)/86400000);
+  return Math.max(1,Math.min(52,Math.floor(diff/7)+1));
+}
+function phaseOf(w){ return PHASES.find(p=>w>=p.w[0]&&w<=p.w[1]) || PHASES[3]; }
+function isDeload(w){ return w%4===0; }
+function blockPos(w){ return ((w-1)%4)+1; }
+function sessCount(s){ return Object.keys(s.done).filter(k=>!k.startsWith('boxing')).length + boxCount(s); }
+function boxCount(s){ return Object.keys(s.done).filter(k=>k.includes('boxing')).length; }
+function hCount(s,h){ return Object.keys(s.habits).filter(k=>k.startsWith(h+':')).length; }
+function streak(s,h){
+  let n=0, d=new Date();
+  for(;;){ if(s.habits[h+':'+todayISO(d)]) {n++; d.setDate(d.getDate()-1);} else { if(n===0 && todayISO(d)===todayISO()){d.setDate(d.getDate()-1); continue;} break; } }
+  return n;
+}
+function lastMeas(s){ return s.meas.length?s.meas[s.meas.length-1]:null; }
+function gapOK(s,t){ const m=lastMeas(s); return (m && m.ar!=null && m.al!=null && (m.ar-m.al)<=t)?1:0; }
+function wtOK(s,t){ return s.meas.some(m=>m.wt>=t)?1:0; }
+function chOK(s,d){ if(s.meas.length<2)return 0; const b=s.meas[0].ch; return s.meas.some(m=>m.ch-b>=d)?1:0; }
+function puOK(s,t){ return s.meas.some(m=>m.pu>=t)?1:0; }
+function closing(s){
+  const g=s.meas.filter(m=>m.ar!=null&&m.al!=null).map(m=>m.ar-m.al);
+  if(g.length<4)return 0;
+  const t=g.slice(-4);
+  return (t[1]<t[0]&&t[2]<t[1]&&t[3]<t[2])?1:0;
+}
+function rankOf(xp){ return Math.min(RANKS.length-1, Math.floor(xp/1800)); }
+
+/* progression: adjust reps by position in 4-week block */
+function adjust(ex,w){
+  const p=blockPos(w);
+  if(ex.r.includes('min')||ex.r.includes('s')||ex.r.includes('m')) return {sets:ex.s,reps:ex.r};
+  let sets=parseInt(ex.s), reps=parseInt(ex.r);
+  if(isNaN(reps)) return {sets:ex.s,reps:ex.r};
+  if(p===2) reps+=1;
+  if(p===3) reps+=2;
+  if(p===4){ sets=Math.max(2,sets-1); }
+  return {sets,reps};
+}
+
+function sessionFor(dow,w,venue){
+  const sch=SCHEDULE[dow], ph=phaseOf(w).id;
+  if(sch.k==='rest') return {sch,list:[]};
+  if(sch.k==='boxing1') return {sch,list:BOX_TECH};
+  if(sch.k==='boxing2') return {sch,list:BOX_COND};
+  return {sch,list:D[sch.k][venue][ph-1]};
+}
+
+/* ---------- PRAYER TIMES (Cairo, Egyptian General Authority: Fajr 19.5°, Isha 17.5°) ---------- */
+const LAT=30.0444, LNG=31.2357;
+const rad=d=>d*Math.PI/180, deg=r=>r*180/Math.PI;
+function sunPos(jd){
+  const D=jd-2451545.0;
+  const g=rad((357.529+0.98560028*D)%360);
+  const q=(280.459+0.98564736*D)%360;
+  const L=rad((q+1.915*Math.sin(g)+0.020*Math.sin(2*g))%360);
+  const e=rad(23.439-0.00000036*D);
+  const decl=Math.asin(Math.sin(e)*Math.sin(L));
+  let RA=deg(Math.atan2(Math.cos(e)*Math.sin(L),Math.cos(L)))/15;
+  RA=(RA+24)%24;
+  const eqt=q/15-RA; // hours
+  return {decl,eqt};
+}
+function hourAngle(angle,decl){
+  const c=(-Math.sin(rad(angle))-Math.sin(rad(LAT))*Math.sin(decl))/(Math.cos(rad(LAT))*Math.cos(decl));
+  if(c<-1||c>1)return null;
+  return deg(Math.acos(c))/15;
+}
+function prayerTimes(date){
+  const jd=Math.floor(date.getTime()/86400000)+2440587.5+0.5; // noon-ish julian
+  const {decl,eqt}=sunPos(jd);
+  const noonUTC=12-LNG/15-eqt;
+  const asrAlt=deg(Math.atan(1/(1+Math.tan(Math.abs(rad(LAT)-decl)))));
+  const t=a=>hourAngle(a,decl);
+  const utc={
+    Fajr:   noonUTC-t(19.5),
+    Dhuhr:  noonUTC+2/60,
+    Asr:    noonUTC+t(-asrAlt),
+    Maghrib:noonUTC+t(0.833),
+    Isha:   noonUTC+t(17.5)
+  };
+  const off=-date.getTimezoneOffset()/60; // device local (Egypt time on his phone)
+  const out={};
+  for(const k in utc){ let h=utc[k]+off; h=((h%24)+24)%24; out[k]=h; }
+  return out;
+}
+function fmtH(h){
+  let H=Math.floor(h), M=Math.round((h-H)*60);
+  if(M===60){H=(H+1)%24;M=0;}
+  const ap=H>=12?'PM':'AM'; let h12=H%12; if(h12===0)h12=12;
+  return h12+':'+String(M).padStart(2,'0')+' '+ap;
+}
+function renderPrayer(){
+  const now=new Date(), pt=prayerTimes(now);
+  const nowH=now.getHours()+now.getMinutes()/60;
+  const names=['Fajr','Dhuhr','Asr','Maghrib','Isha'];
+  let next=null;
+  for(const n of names){ if(pt[n]>nowH){ next=n; break; } }
+  document.getElementById('prayerRow').innerHTML=names.map(n=>
+    `<div class="pr ${n===next?'next':(pt[n]<=nowH?'past':'')}"><div class="pn">${n}</div><div class="pt">${fmtH(pt[n])}</div></div>`).join('');
+  if(next){
+    let mins=Math.round((pt[next]-nowH)*60);
+    document.getElementById('nextPrayer').textContent=next+' in '+(mins>=60?Math.floor(mins/60)+'h '+(mins%60)+'m':mins+' min');
+  }else{
+    const tmrw=prayerTimes(new Date(now.getTime()+86400000));
+    let mins=Math.round((24-nowH+tmrw.Fajr)*60);
+    document.getElementById('nextPrayer').textContent='Fajr in '+Math.floor(mins/60)+'h '+(mins%60)+'m';
+  }
+}
+setInterval(renderPrayer,60000);
+
+const MEALS=[
+  {id:'m1',n:'Breakfast 08:30',d:'3 eggs · foul or labneh toast · fruit · milk'},
+  {id:'m2',n:'Lunch box at Dhuhr',d:'Rice + batch chicken, or pasta + tuna. Made the night before.'},
+  {id:'m3',n:'16:30 shake',d:'Milk + peanut butter + banana + oats. The one skinny guys skip.'},
+  {id:'m4',n:'Dinner after Maghrib',d:'A third protein, a third carbs. Thu/Fri nights and one weekday wildcard are free — pizza counts, just add protein.'}
+];
+
+/* ---------- RENDER ---------- */
+function toast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('on');
+  clearTimeout(t._x); t._x=setTimeout(()=>t.classList.remove('on'),2600);
+}
+
+function sessionKey(d){ const dow=(d||new Date()).getDay(); return SCHEDULE[dow].k+':'+todayISO(d); }
+
+function render(){
+  renderPrayer();
+  renderTasks();
+  const w=curWeek(S), ph=phaseOf(w), dow=new Date().getDay();
+  const dl=isDeload(w);
+
+  document.getElementById('wkLabel').textContent='WEEK '+w+' / 52';
+  document.getElementById('rankName').textContent=RANKS[rankOf(S.xp)];
+  document.getElementById('xpFill').style.width=((S.xp%1800)/1800*100)+'%';
+  document.getElementById('phaseChip').textContent=dl?'DELOAD WEEK':ph.name.toUpperCase();
+  document.getElementById('phaseChip').className='chip '+(dl?'cool':'hot');
+  document.getElementById('todayDate').textContent=new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'}).toUpperCase();
+
+  const {sch,list}=sessionFor(dow,w,S.venue);
+  document.getElementById('sessTitle').textContent=sch.name;
+  document.getElementById('sessSub').textContent=dl?sch.sub+' — deload: lighter loads, one set less, leave plenty in the tank.':sch.sub;
+  document.getElementById('venueSel').style.display=(sch.k==='rest'||sch.k.startsWith('boxing'))?'none':'flex';
+  document.getElementById('venueSel').querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.v===S.venue));
+
+  const key=sessionKey();
+  const card=document.getElementById('exCard');
+  if(sch.k==='rest'){
+    card.innerHTML='<div style="padding:26px 0" class="note">Nothing today. A walk if you want one, and food. Friday is a rest day on purpose — it is what makes a long Thursday night survivable, and it is the reason this plan is still running in November.</div>';
+    document.getElementById('finishBtn').style.display='none';
+  }else{
+    document.getElementById('finishBtn').style.display='block';
+    card.innerHTML=list.map((x,i)=>{
+      const a=adjust(x,w);
+      const tk=S.ticks[key+'#'+i];
+      return `<div class="ex ${tk?'done':''}" data-i="${i}">
+        <div class="tick ${tk?'on':''}"><svg viewBox="0 0 24 24" fill="none" stroke="#FFF8EC" stroke-width="3.4"><path d="M4 12l5 5L20 6"/></svg></div>
+        <div class="ex-body">
+          <div class="ex-name">${x.n}</div>
+          <div class="ex-meta"><span class="ex-sets">${a.sets} × ${a.reps}</span>${x.tag?`<span class="tag ${x.tag}">${x.tag==='uni'?'left leads':x.tag==='post'?'posture':x.tag==='left'?'left only':x.tag==='core'?'core':'key lift'}</span>`:''}</div>
+          ${x.note?`<div class="ex-note">${x.note}</div>`:''}
+        </div></div>`;
+    }).join('');
+    card.querySelectorAll('.ex').forEach(el=>el.onclick=()=>{
+      const i=el.dataset.i, k=key+'#'+i;
+      S.ticks[k]=!S.ticks[k]; save(); render();
+    });
+    const isDone=!!S.done[key];
+    const b=document.getElementById('finishBtn');
+    b.textContent=isDone?'Session complete ✓':'Complete session';
+    b.disabled=isDone;
+  }
+
+  // habits
+  ['posture','clean'].forEach(h=>{
+    const on=!!S.habits[h+':'+todayISO()];
+    const btn=document.querySelector(`.habit[data-h="${h}"]`);
+    btn.classList.toggle('on',on);
+    document.getElementById('s-'+h).textContent=streak(S,h)+' day streak';
+  });
+  document.getElementById('postureList').innerHTML=POSTURE.map(p=>'• '+p).join('<br><br>');
+
+  // meals
+  document.getElementById('mealCard').innerHTML=MEALS.map(mm=>{
+    const on=!!S.habits[mm.id+':'+todayISO()];
+    return `<div class="ex ${on?'done':''}" data-m="${mm.id}">
+      <div class="tick ${on?'on':''}"><svg viewBox="0 0 24 24" fill="none" stroke="#FFF8EC" stroke-width="3.4"><path d="M4 12l5 5L20 6"/></svg></div>
+      <div class="ex-body"><div class="ex-name">${mm.n}</div><div class="ex-note">${mm.d}</div></div></div>`;
+  }).join('');
+  document.getElementById('mealCard').querySelectorAll('.ex').forEach(el=>el.onclick=()=>{
+    const k=el.dataset.m+':'+todayISO();
+    if(S.habits[k]){ delete S.habits[k]; S.xp=Math.max(0,S.xp-15); } else { S.habits[k]=1; S.xp+=15; }
+    save(); render();
+  });
+
+  // week strip
+  const names=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const mon=new Date(); mon.setDate(mon.getDate()-mon.getDay());
+  document.getElementById('weekStrip').innerHTML=names.map((nm,i)=>{
+    const d=new Date(mon); d.setDate(mon.getDate()+i);
+    const k=SCHEDULE[i].k+':'+todayISO(d);
+    return `<div class="wkd ${i===dow?'on':''} ${S.done[k]?'done':''}"><div class="d">${nm}</div><div class="t">${SCHEDULE[i].name}</div></div>`;
+  }).join('');
+  document.getElementById('weekPlan').innerHTML=SCHEDULE.map((s,i)=>`<strong>${names[i]}</strong> — ${s.name}: ${s.sub}`).join('<br>');
+
+  // quests
+  let unlocked=0;
+  document.getElementById('qGrid').innerHTML=QUESTS.map(q=>{
+    const [have,need]=q.g(S);
+    const done=have>=need;
+    if(done){ unlocked++; if(!S.unlocked.includes(q.id)){ S.unlocked.push(q.id); S.xp+=250; save(); setTimeout(()=>toast('Unlocked — '+q.n),400); } }
+    const pct=Math.min(100,have/need*100);
+    return `<div class="q ${done?'unlocked':'locked'}">
+      <span class="qi">${q.i}</span>
+      <div class="qn">${q.n}</div>
+      <div class="qd">${q.d}</div>
+      ${!done&&need>1?`<div class="qbar"><i style="width:${pct}%"></i></div>`:''}
+    </div>`;
+  }).join('');
+  document.getElementById('qCount').textContent=unlocked+' / '+QUESTS.length;
+  document.getElementById('xpNum').textContent=S.xp;
+
+  // body
+  const m=lastMeas(S);
+  if(m&&m.al!=null&&m.ar!=null){
+    const gap=(m.ar-m.al);
+    document.getElementById('gapNum').innerHTML=gap.toFixed(1)+'<small>cm</small>';
+    const mx=Math.max(m.al,m.ar);
+    document.getElementById('barL').style.width=(m.al/mx*100)+'%';
+    document.getElementById('barR').style.width='100%';
+    document.getElementById('valL').textContent=m.al.toFixed(1);
+    document.getElementById('valR').textContent=m.ar.toFixed(1);
+    const first=S.meas.find(x=>x.al!=null&&x.ar!=null);
+    const g0=first?(first.ar-first.al):gap;
+    document.getElementById('gapNote').innerHTML= gap<=0.5
+      ? 'Under half a centimetre. At this point the remaining difference is mostly bone, not muscle — a decade of tennis from childhood thickens the racket-arm skeleton and that part does not reverse. You have closed everything that was closeable.'
+      : `Started at ${g0.toFixed(1)} cm. Closed ${(g0-gap).toFixed(1)} cm so far. Keep the left leading on every unilateral set.`;
+  }
+  document.getElementById('targets').innerHTML=[
+    ['Bodyweight','75 → 80 kg', m?m.wt+' kg':'—'],
+    ['Chest','+7 cm', m?m.ch+' cm':'—'],
+    ['Arm gap','under 0.5 cm', m&&m.ar!=null?(m.ar-m.al).toFixed(1)+' cm':'—'],
+    ['Weighted pull-up','+20 kg × 5', m&&m.pu!=null?'+'+m.pu+' kg':'—'],
+    ['Sessions','200 in the year', sessCount(S)]
+  ].map(r=>`<div style="display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line)">
+      <span style="font-size:13px">${r[0]}</span>
+      <span class="mono" style="font-size:12px;color:var(--bone-dim)">${r[1]}</span>
+      <span class="mono" style="font-size:12px;color:var(--copper)">${r[2]}</span></div>`).join('');
+
+  document.getElementById('histTable').innerHTML=
+    '<tr><th>Date</th><th>Wt</th><th>Chest</th><th>L</th><th>R</th><th>Gap</th></tr>'+
+    S.meas.slice().reverse().slice(0,14).map(x=>`<tr><td>${x.d.slice(5)}</td><td>${x.wt??'—'}</td><td>${x.ch??'—'}</td><td>${x.al??'—'}</td><td>${x.ar??'—'}</td><td style="color:var(--copper)">${(x.ar!=null&&x.al!=null)?(x.ar-x.al).toFixed(1):'—'}</td></tr>`).join('');
+
+  // year
+  document.getElementById('statSess').textContent=sessCount(S);
+  document.getElementById('statWk').textContent=w;
+  document.getElementById('statStreak').textContent=streak(S,'posture');
+  document.getElementById('phaseList').innerHTML=PHASES.map(p=>{
+    const cur=w>=p.w[0]&&w<=p.w[1], past=w>p.w[1];
+    let cells='';
+    for(let i=p.w[0];i<=p.w[1];i++) cells+=`<i class="${i===w?'cur':i<w?'done':''} ${isDeload(i)?'dl':''}"></i>`;
+    return `<div class="phase ${cur?'cur':''} ${past?'past':''}"><div class="dot"></div>
+      <h3>${p.name}</h3><div class="pw">WEEKS ${p.w[0]}–${p.w[1]} · ${p.tag.toUpperCase()}</div>
+      <p>${p.desc}</p><div class="wgrid">${cells}</div></div>`;
+  }).join('');
+}
+
+/* ---------- EVENTS ---------- */
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('on'));
+  document.getElementById('v-'+b.dataset.v).classList.add('on');
+  window.scrollTo(0,0);
+});
+document.getElementById('venueSel').querySelectorAll('button').forEach(b=>b.onclick=()=>{ S.venue=b.dataset.v; save(); render(); });
+document.querySelectorAll('.habit').forEach(b=>b.onclick=()=>{
+  const h=b.dataset.h, k=h+':'+todayISO();
+  if(S.habits[k]){ delete S.habits[k]; S.xp=Math.max(0,S.xp-25); } else { S.habits[k]=1; S.xp+=25; }
+  save(); render();
+});
+document.getElementById('finishBtn').onclick=()=>{
+  const k=sessionKey();
+  if(S.done[k])return;
+  S.done[k]=1; S.xp+=150;
+  // perfect week check
+  const mon=new Date(); mon.setDate(mon.getDate()-mon.getDay());
+  let all=true;
+  for(let i=0;i<7;i++){ if(SCHEDULE[i].k==='rest')continue; const d=new Date(mon); d.setDate(mon.getDate()+i);
+    if(!S.done[SCHEDULE[i].k+':'+todayISO(d)]) all=false; }
+  if(all){ S.perfect=(S.perfect||0)+1; S.xp+=300; setTimeout(()=>toast('Perfect week. +300 XP'),900); }
+  save(); render(); toast('Session logged. +150 XP');
+};
+document.getElementById('saveMeas').onclick=()=>{
+  const g=id=>{const v=parseFloat(document.getElementById(id).value); return isNaN(v)?null:v;};
+  const rec={d:todayISO(),wt:g('i-wt'),ch:g('i-ch'),al:g('i-al'),ar:g('i-ar'),wa:g('i-wa'),pu:g('i-pu')};
+  if(rec.wt==null&&rec.ch==null&&rec.al==null){ toast('Enter at least weight, chest, or arms'); return; }
+  S.meas.push(rec); S.xp+=75; save(); render();
+  ['i-wt','i-ch','i-al','i-ar','i-wa','i-pu'].forEach(i=>document.getElementById(i).value='');
+  toast('Measurements saved. +75 XP');
+};
+document.getElementById('resetBtn').onclick=async()=>{
+  if(!confirm('Erase all sessions, measurements and unlocks? This cannot be undone.'))return;
+  S={start:todayISO(),done:{},meas:[],habits:{},unlocked:[],xp:0,venue:'gym',perfect:0,ticks:{}};
+  await save(); render(); toast('Reset. Week 1, day 1.');
+};
+
+/* ---------- TASKS ---------- */
+function renderTasks(){
+  const list=(S.todos||[]).slice().sort((a,b)=>{
+    if(a.done!==b.done)return a.done?1:-1;
+    if(a.due&&b.due)return a.due<b.due?-1:1;
+    if(a.due)return -1; if(b.due)return 1;
+    return b.id-a.id;
+  });
+  const open=list.filter(t=>!t.done).length;
+  document.getElementById('t-count').textContent=open?open+' open':'Tasks';
+  const now=Date.now();
+  document.getElementById('taskList').innerHTML=list.length?list.map(t=>{
+    let cls='',due='';
+    if(t.due){
+      const d=new Date(t.due), ms=d-now;
+      due=d.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'})+' · '+d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+      if(!t.done){ if(ms<0){cls='over';due='OVERDUE · '+due;} else if(ms<3600000*3){cls='soon';} }
+    }
+    return `<div class="trow ${t.done?'done':''} ${cls}" data-id="${t.id}">
+      <div class="tick ${t.done?'on':''}"><svg viewBox="0 0 24 24" fill="none" stroke="#FFF8EC" stroke-width="3.4"><path d="M4 12l5 5L20 6"/></svg></div>
+      <div style="flex:1"><div class="tt">${t.t.replace(/</g,'&lt;')}</div>${due?`<div class="tdue">${due}</div>`:''}</div>
+      <button class="tdel" data-del="${t.id}">×</button></div>`;
+  }).join(''):'<div class="note" style="padding:20px 0">Nothing yet. Add the first one above — work tasks, errands, anything.</div>';
+  document.getElementById('taskList').querySelectorAll('.trow').forEach(el=>{
+    el.querySelector('.tick').parentElement.onclick=(ev)=>{
+      if(ev.target.closest('.tdel'))return;
+      const t=S.todos.find(x=>x.id==el.dataset.id);
+      t.done=!t.done; if(t.done&&!t.xpGiven){S.xp+=10;t.xpGiven=1;}
+      save(); renderTasks();
+    };
+  });
+  document.getElementById('taskList').querySelectorAll('.tdel').forEach(b=>b.onclick=(ev)=>{
+    ev.stopPropagation();
+    S.todos=S.todos.filter(x=>x.id!=b.dataset.del);
+    save(); renderTasks();
+  });
+}
+document.getElementById('t-add').onclick=()=>{
+  const inp=document.getElementById('t-text'), due=document.getElementById('t-due');
+  const txt=inp.value.trim();
+  if(!txt){ inp.focus(); return; }
+  S.todos=S.todos||[];
+  S.todos.push({id:Date.now(),t:txt,due:due.value||null,done:false});
+  inp.value=''; due.value='';
+  save(); renderTasks(); toast('Task added');
+};
+document.getElementById('t-text').addEventListener('keydown',e=>{ if(e.key==='Enter')document.getElementById('t-add').click(); });
+setInterval(renderTasks,60000);
+
+/* ---------- MANIFEST ---------- */
+(function(){
+  const icon='data:image/png;base64,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';
+  const man={name:'SABA',short_name:'SABA',start_url:'.',display:'standalone',
+    background_color:'#FFFFFF',theme_color:'#FFFFFF',
+    icons:[{src:icon,sizes:'512x512',type:'image/png'}]};
+  const ml=document.createElement('link'); ml.rel='manifest';
+  ml.href=URL.createObjectURL(new Blob([JSON.stringify(man)],{type:'application/json'}));
+  document.head.appendChild(ml);
+})();
+
+/* ---------- BOOT ---------- */
+(async()=>{ await load(); render(); })();
+</script>
+</body>
+</html>
